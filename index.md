@@ -1,4 +1,6 @@
-## Download And Run the File
+## Rectangular DRA Calculator
+
+### Download And Run the File
 
 ### Enter Permittivity, Permeability, Length in mm, Width in mm, Height in mm.
 Output displayed in GHz.
