@@ -1,7 +1,7 @@
 # Rectangular-DRA-Calculator (A Simple UI application using Python Tkinter)
 This Python program when executed, opens a application asking required parameters for calculating the resonant frequency of the Rectangular Dielectric Resonator Antenna for different modes of operations.
 
-## Download And Run the File
+## Download And Run the File, Note: Python must be installed :-)
 
 ### Enter Permittivity, Permeability, Length in mm, Width in mm, Height in mm.
 Output displayed in GHz.
