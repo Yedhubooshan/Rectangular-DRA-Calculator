@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Download And Run the File
 
-You can use the [editor on GitHub](https://github.com/Yedhubooshan/Rectangular-DRA-Calculator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Enter Permittivity, Permeability, Length in mm, Width in mm, Height in mm.
+Output displayed in GHz.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image](https://user-images.githubusercontent.com/52876597/121818594-c3b4ac80-cca5-11eb-97c7-60d566b30b29.png)
 
-### Markdown
+Code Snippet:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+        c = (3 * pow(10,8))/(math.sqrt(float(permittivity1)*float(permeability1))*2)
+        a = round((1000/float(length1)),2)
+        b = round((1000/float(width1)),2)
+        d = round((1000/float(height1)),2)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+        e,f,g = round(pow(a,2)),round(pow(b,2)),round(pow(d,2))
+        
+        total111 = (1*e) + (1*f) + (1*g)
+        total101 = (1*e) + (0*f) + (1*g)
+        total011 = (0*e) + (1*f) + (1*g)
+        total110 = (1*e) + (1*f) + (0*g)
+        total010 = (0*e) + (1*f) + (0*g)
+        total100 = (1*e) + (0*f) + (0*g)
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Yedhubooshan/Rectangular-DRA-Calculator/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+        dimen111 = math.sqrt(total111)
+        dimen101 = math.sqrt(total101)
+        dimen011 = math.sqrt(total011)
+        dimen110 = math.sqrt(total110)
+        dimen010 = math.sqrt(total010)
+        dimen100 = math.sqrt(total100)
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+        final111 = round((dimen111*c)/pow(10,9),2)
+        final101 = round((dimen101*c)/pow(10,9),2)
+        final011 = round((dimen011*c)/pow(10,9),2)
+        final110 = round((dimen110*c)/pow(10,9),2)
+        final010 = round((dimen010*c)/pow(10,9),2)
+        final100 = round((dimen100*c)/pow(10,9),2)
+```
+Calculation Part of the program displayed. Created based on the principle of Rectangular Waveguide Model.
